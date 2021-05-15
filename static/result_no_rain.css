@@ -1,0 +1,23 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.prediction-text {
+    text-align: center;
+    padding-top:5%;
+    font-size:30px
+}
+
+.no_rain {
+      height:100vh;
+      margin: 0;
+      padding: 0;
+      background: url('aus_no_rain.jpg');
+      background-size: cover;
+      color:#fff;
+      /* text-align:center; */
+}

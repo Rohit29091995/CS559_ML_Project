@@ -1,0 +1,25 @@
+body {
+     background-image: url('back.jpg');
+     font-family: 'Poppins', sans-serif;
+     height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.form {
+    background-color: white;
+    width: 40vw;
+    margin: 50px auto;
+    padding: 10px 40px;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+    border-radius: 12px;
+}
+.form h1 {
+    color: #0fd3dd;
+}
+
+.button {
+    padding: 5px 30px;
+    font-size: 18px;
+}

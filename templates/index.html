@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href={{url_for('static',filename='styles.css')}}>
+    <title>Australia Rain Prediction</title>
+</head>
+<body>
+    <section id="prediction-form">
+        <form class="form" action="/predict", method="POST">
+            <h1 class="my-3 text-center">Australia Rain Prediction</h1>
+            <div class="row">
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                    <input type="text" name="min_temp" class="form-control" placeholder="Minimum Temperature" required="required"/>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+		    <input type="text" name="max_temp" class="form-control" placeholder="Maximum Temperature" required="required"/>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+		    <input type="text" name="rainfall" class="form-control" placeholder="Rainfall" required="required"/>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <input type="text" name="evaporation" class="form-control" placeholder="Evaporation" required="required"/>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <input type="text" name="sunshine" class="form-control" placeholder="Sunshine" required="required"/>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+		    <input type="text" name="wind-gust" class="form-control" placeholder="Wind Gust Speed" required="required"/>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <input type="text" name="wind-speed-9AM" class="form-control" placeholder="Wind Speed at 9AM" required="required"/>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <input type="text" name="wind-speed-3PM" class="form-control" placeholder="Wind Speed at 3PM" required="required"/>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <input type="text" name="humidity-9AM" class="form-control" placeholder="Humidity at 9AM" required="required"/>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <input type="text" name="humidity-3PM" class="form-control" placeholder="Humidity at 3PM" required="required"/>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <input type="text" name="pressure-9AM" class="form-control" placeholder="Pressure at 9AM" required="required"/>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <input type="text" name="pressure-3PM" class="form-control" placeholder="Pressure at 3PM" required="required"/>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <input type="text" name="cloud-9AM" class="form-control" placeholder="Cloud at 9AM" required="required"/>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <input type="text" name="cloud-3PM" class="form-control" placeholder="Cloud at 3AM" required="required"/>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <input type="text" name="temp-9AM" class="form-control" placeholder="Temperature at 9AM" required="required"/>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <input type="text" name="temp-3PM" class="form-control" placeholder="Temperature at 3PM" required="required"/>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <input type="text" name="rain-today" class="form-control" placeholder="Rain Today" required="required"/>
+                    </div>
+                </div>
+               
+                <div class="col-md-6 my-2 d-flex align-items-end justify-content-around">
+                     <button type="submit" class="btn btn-info button" style="margin-left: 10%;">Predict</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <div>
+         <h1><center> {{ prediction_text }} </center></h1>
+    </div>
+    
+</script>
+</body>
+</html>
+
+
